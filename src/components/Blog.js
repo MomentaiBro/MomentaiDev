@@ -25,31 +25,31 @@ export default function Blog() {
 
     return(
         <main className="blog__page">
-            <section>
+            <section className="blog__left_section">
                 <h1 className="blog__title title">Blog Page</h1>
                 <h2>Welcome to my blogging space</h2>
             </section>
             <div className="blog__grid">
                 {postData && postData.map((post, index) => (
-                            <article>
-                                <Link 
-                                    to={"/post/" + post.slug.current} 
-                                    key={post.slug.current}
-                                >
-                                    <span
-                                        className=""
-                                        key={index}
+                            <article
+                                className="blog__post__card">
+                                    <Link 
+                                        to={"/post/" + post.slug.current} 
+                                        key={post.slug.current}
                                     >
-                                        <img 
-                                            src={post.mainImage.assest.url}
-                                            alt={post.mainImage.alt}
-                                            className="blog__img"
-                                        />
-                                        <span className="blog__post__title">
-                                            <h3>{post.title}</h3>
+                                        <span
+                                            key={index}
+                                        >
+                                            <img 
+                                                src={post.mainImage.asset.url}
+                                                alt={post.mainImage.alt}
+                                                className="blog__img"
+                                            />
+                                            <span className="blog__post__title">
+                                                <h3>{post.title}</h3>
+                                            </span>
                                         </span>
-                                    </span>
-                                </Link>
+                                    </Link>
                             </article>
                         ))}  
             </div>
