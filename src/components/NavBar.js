@@ -6,21 +6,21 @@ export default function NavBar() {
         <header>
             <div>
                 <nav>
-                    <Navlink to='/' exact>
+                    <NavLink to='/' exact>
                         Home
-                    </Navlink>
-                    <Navlink to='/about'>
+                    </NavLink>
+                    <NavLink to='/about'>
                         About
-                    </Navlink>
-                    <Navlink to='/blog'>
+                    </NavLink>
+                    <NavLink to='/blog' exact>
                         Blog
-                    </Navlink>
-                    <Navlink to='/project'>
+                    </NavLink>
+                    <NavLink to='/project' >
                         Projects
-                    </Navlink>
-                    <Navlink to='/contact'>
-                        Contact Me
-                    </Navlink>
+                    </NavLink>
+                    <NavLink to='/contact'>
+                        Contact
+                    </NavLink>
                 </nav>
             </div>
         </header>
