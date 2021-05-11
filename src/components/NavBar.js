@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom"
 
 export default function NavBar() {
     return(
-        <footer>
-            <div className="NavBar__">
-                <nav>
+        <footer className="NavBar__wrapper">
+            <div className="NavBar__area">
+                <nav className="NavBar__links">
                     <NavLink to='/' exact>
                         Home
                     </NavLink>
