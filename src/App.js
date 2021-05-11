@@ -4,6 +4,7 @@ import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Blog from "./components/Blog";
 import Project from "./components/Project";
+import Contact from "./components/Contact";
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route component={SinglePost} path='/post/:slug' />
         <Route component={Blog} path='/blog' />
         <Route component={Project} path='/project' />
+        <Route component={Contact} path='/contact' />
       </Switch>
     </BrowserRouter>
   );
