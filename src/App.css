@@ -17,6 +17,8 @@ font-family: 'Raleway', sans-serif; */
 
 html, body{
   background: #ff6;
+  height: 100vh;
+  width: 100vw;
   
 }
 
@@ -67,19 +69,56 @@ html, body{
 
 /* Blog */
 
+.blog__title{
+  color: white;
+}
+
 .blog__page{
   background: #000;
   height: 95vh;
   width:100vw;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+}
+.blog__left_section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30vw;
+  /* border: 2px solid white; */
+  background: pink;
+  animation: blog_left_bar 1s ease-in-out; 
 }
 
-/* .blog__grid{
+.blog__grid{
+  display: flex;
+  height: 100%;
+  width: 70vw;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-flow: row-reverse;
+  margin: 2%;
+  padding-left: 31vw;
 
 }
-
+.blog__post__card{
+  height: auto;
+  width: auto;
+  border: 5px dotted white;
+  padding-bottom: 50px;
+  margin: 10px
+}
 .blog__post__title{
+  text-align: center;
 
-} */
+}
+
+.blog__img{
+  width: 200px;
+  height: 200px;
+}
 
 
 /* Contact */
@@ -138,3 +177,16 @@ html, body{
 /* Project */
 
 /* SinglePost */
+
+/* animations */
+
+@keyframes blog_left_bar{
+  from{
+    top: 100vh;
+    left: 0;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
