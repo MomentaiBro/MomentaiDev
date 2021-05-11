@@ -89,9 +89,9 @@ html, body{
   transition: 1s;
 }
 
-.NavBar__area:hover{
-  ;
-}
+/* .NavBar__area:hover{
+
+} */
 
 .NavBar__links{
   margin-top: 15px;
