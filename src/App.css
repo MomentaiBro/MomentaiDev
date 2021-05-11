@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;900&family=Raleway:ital,wght@0,100;0,400;0,700;0,900;1,900&display=swap');
+
 :root{
+  --title: 'Cinzel', serif;
+  --deco-title: 'Cinzel Decorative', cursive;
+  --reg-text: 'Raleway', sans-serif;
 }
+
+/* font-family: 'Cinzel', serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Raleway', sans-serif; */
 
 *{
   padding: 0;
@@ -8,6 +17,7 @@
 
 html, body{
   background: #ff6;
+  
 }
 
 .App{
@@ -60,15 +70,22 @@ html, body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 1px solid black;
 }
 .NavBar__links a{
   text-decoration: none;
-  font-size: 2em;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: var(--title);
+  color: #000;
   
 }
-.NavBar__links a:active{
+.NavBar__links a:visited{
   text-decoration: none;
+  
+}
+.NavBar__links a:hover{
+  background:crimson;
+  transition: 6s;
   
 }
 
