@@ -6,19 +6,35 @@ export default function NavBar() {
         <footer className="NavBar__wrapper">
             <div className="NavBar__area">
                 <nav className="NavBar__links">
-                    <NavLink to='/' exact>
+                    <NavLink 
+                        to='/' 
+                        exact
+                        activeClassName="active_"
+                    >
                         Home
                     </NavLink>
-                    <NavLink to='/about'>
+                    <NavLink 
+                        to='/about'
+                        activeClassName="active_"
+                    >
                         About
                     </NavLink>
-                    <NavLink to='/blog' exact>
+                    <NavLink 
+                        to='/blog'
+                        activeClassName="active_"
+                    >
                         Blog
                     </NavLink>
-                    <NavLink to='/project' >
+                    <NavLink 
+                        to='/project'
+                        activeClassName="active_"
+                    >
                         Projects
                     </NavLink>
-                    <NavLink to='/contact'>
+                    <NavLink 
+                        to='/contact'
+                        activeClassName="active_"
+                    >
                         Contact
                     </NavLink>
                 </nav>
