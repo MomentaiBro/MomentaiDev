@@ -30,6 +30,7 @@ html, body{
   font-size: 2em;
   padding: 10px 5px;
   /* color: whitesmoke; */
+  color: whitesmoke;
 
 }
 
@@ -66,6 +67,21 @@ html, body{
 
 /* Blog */
 
+.blog__page{
+  background: #000;
+  height: 95vh;
+  width:100vw;
+}
+
+/* .blog__grid{
+
+}
+
+.blog__post__title{
+
+} */
+
+
 /* Contact */
 
 /* NavBar */
@@ -89,9 +105,9 @@ html, body{
   transition: 1s;
 }
 
-.NavBar__area:hover{
-  ;
-}
+/* .NavBar__area:hover{
+
+} */
 
 .NavBar__links{
   margin-top: 15px;
