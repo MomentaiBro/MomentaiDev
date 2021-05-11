@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom"
 
 export default function NavBar() {
     return(
-        <header>
-            <div>
+        <footer>
+            <div className="NavBar__">
                 <nav>
                     <NavLink to='/' exact>
                         Home
@@ -23,6 +23,6 @@ export default function NavBar() {
                     </NavLink>
                 </nav>
             </div>
-        </header>
+        </footer>
     )
 }
