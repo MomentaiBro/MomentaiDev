@@ -10,10 +10,8 @@ import './App.css';
 
 function App() {
   return (
+  <main className="App">
     <BrowserRouter>
-      <div className="clr-sqr">
-        
-      </div>
       <Switch>
         <Route component={Home} path='/' exact/>
         <Route component={About} path='/about' />
@@ -24,6 +22,7 @@ function App() {
       </Switch>
       <NavBar />
     </BrowserRouter>
+    </main>
   );
 }
 
