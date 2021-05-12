@@ -19,10 +19,13 @@ export default function Project() {
         .catch(console.error)
     }, []);
     return(
-        <main className="project__main">
+        <main className="project__main slide">
             <section>
-                <h1 className="project__title title">Project Page</h1>
+                <h1 className="project__title title">Projects</h1>
                 <h2>These are my Projects</h2>
+                <div className="mountain__one"></div>
+                <span className="mountain__two"></span>
+                <span className="mountain__three"></span>
 
         {projectData && projectData.map((project, index) => (
 

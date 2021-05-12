@@ -26,7 +26,7 @@ export default function About() {
 
     return(
 
-        <main>
+        <main className="about__main slide">
             <img />
             <div>
                 <section>

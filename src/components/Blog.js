@@ -24,7 +24,7 @@ export default function Blog() {
 
 
     return(
-        <main className="blog__page">
+        <main className="blog__main slide">
             <section className="blog__left_section">
                 <h1 className="blog__title title">Blog Page</h1>
                 <h2>Welcome to my blogging space</h2>
