@@ -23,9 +23,11 @@ export default function Project() {
             <section>
                 <h1 className="project__title title">Projects</h1>
                 <h2>These are my Projects</h2>
-                <div className="mountain__one"></div>
-                <span className="mountain__two"></span>
-                <span className="mountain__three"></span>
+                <section>
+                    <div className="mountain__three"></div>
+                    <div className="mountain__two"></div>
+                    <div className="mountain__one"></div>
+                </section>
 
         {projectData && projectData.map((project, index) => (
 

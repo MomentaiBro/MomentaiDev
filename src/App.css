@@ -27,6 +27,7 @@ font-family: 'Raleway', sans-serif; */
 }
 
 html, body{
+  position: fixed;
   height: 100vh;
   width: 100vw;
   background: black;
@@ -144,8 +145,9 @@ html, body{
 
 /* NavBar */
 .navbar__main{
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left:0;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -207,20 +209,21 @@ html, body{
 
 .project__title{
   font-family: var(--deco-title);
-  font-size: 25vh;
+  font-size: 15vh;
   font-weight: 100;
   position: absolute;
   top: 4%;
   left: 6%;
-  opacity: .5;
+  opacity: .9;
 }
 
 .mountain__one{
   position: absolute;
   height: 96vh;
   width: 100vw;
-  background: slategray;
+  background: gray;
   clip-path: polygon(15% 65%, 0% 100%, 100% 100%);
+
 }
 .mountain__two{
   position: absolute;
@@ -228,6 +231,8 @@ html, body{
   width: 100vw;
   background: slategray;
   clip-path: polygon(62% 63%, 0% 100%, 100% 100%);
+
+
 }
 .mountain__three{
   position: absolute;
@@ -235,6 +240,8 @@ html, body{
   width: 100vw;
   background: darkslategray;
   clip-path: polygon(83% 35%, 45% 100%, 100% 100%);
+
+
 }
 
 /* SinglePost */
@@ -243,6 +250,15 @@ html, body{
   height: 95vh;
   width: auto;
   background: brown;
+}
+
+
+.loading__screen{
+  display: flex;
+  height:100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
 

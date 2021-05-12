@@ -1,5 +1,4 @@
 import React from "react"
-import image from "../1133210.jpeg"
 
 
 
