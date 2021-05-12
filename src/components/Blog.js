@@ -31,11 +31,8 @@ export default function Blog() {
             </section>
             <div className="blog__grid">
                 {postData && postData.map((post, index) => (
-                            <article
-                                className="blog__post__card">
-                                    <Link 
-                                        to={"/post/" + post.slug.current} 
-                                        key={post.slug.current}
+                            <article className="blog__post__card">
+                                    <Link to={"/post/" + post.slug.current}
                                     >
                                         <span
                                             key={index}
