@@ -57,10 +57,8 @@ html, body{
 }
 
 .home__main{
-
   width: auto;
   height: 95vh;
-  border: 1px solid darkkhaki;
 }
 
 .home__main img{
@@ -202,7 +200,7 @@ html, body{
 
 /* Project */
 .project__main{
-  background: rgb(135,206,235); 
+  /* background: rgb(135,206,235);  */
   height: 95vh;
   width: 100vw;
 }

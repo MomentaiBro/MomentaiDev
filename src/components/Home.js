@@ -17,14 +17,27 @@ export default function Home() {
 
 
     
+        var angle = 0.0;
+        var offset= 490;
+        var scalar = 40;
+        var speed = 0.005;
+    
         const draw = (p5) => {
             p5.background(0);
-            p5.fill
-            p5.polygon(x, y, 70, 70);
+            var x = (p5.windowWidth/1.2)
+            var y = p5.windowHeight/2
+            var y1 = offset + p5.sin(angle) * scalar;
+            var y2 = offset + p5.sin(angle + 0.6) * scalar;
+            var y3 = offset + p5.sin(angle + 0.8) * scalar;
+            p5.ellipse(x, y1, 300, 900);
+            p5.ellipse(300, y2, 40, 40);
+            p5.ellipse(500, y3, 40, 40);
+            angle += speed;
+            // p5.polygon();
             // NOTE: Do not use setState in the draw function or in functions that are executed
             // in the draw function...
             // please use normal variables or class properties for these purposes
-            x++;
+            // x++;
         };
         return(
         <main className="home__main slide">
@@ -32,7 +45,9 @@ export default function Home() {
             <section className="home_title__box">
                 <h1 className="home__title title">Home Page</h1>
             </section>
-            <Sketch setup={setup} draw={draw} />
+            <div>
+                <Sketch setup={setup} draw={draw} />
+            </div>
             
         </main>
     )
