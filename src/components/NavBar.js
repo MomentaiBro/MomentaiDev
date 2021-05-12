@@ -20,7 +20,7 @@ export default function NavBar() {
                         About
                     </NavLink>
                     <NavLink 
-                        to='/blog'
+                        to='/post'
                         activeClassName="active_"
                     >
                         Blog

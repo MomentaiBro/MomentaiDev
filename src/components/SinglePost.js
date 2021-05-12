@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url"
+import BlockContent from "@sanity/block-content-to-react"
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -23,34 +24,46 @@ export default function SinglePost() {
                     _id,
                     url
                 }
-                },
-                body,
-                "name": author->name,
-                "authorImage": author->image
-            }
-        }`
-    ).then((data) => setSinglePost(data[0]))
-    .catch(console.error)
-    }, [slug])
+            },
+            body,
+            "name":author->name,
+            "authorImage": author->image
+        }`)
+        .then((data) => setSinglePost(data[0]))
+        .catch(console.error);
+    }, [slug]);
 
-    if(!singlePost) return <div>Loading...</div>
+    if(!singlePost) return <div> NO POSTS :(((( YAY</div>;
 
     return(
-        <main>
+        <main className="SP__slide">
             <article>
                 <header>
                     <div>
                         <div>
-                            <h1>SinglePost Page</h1>
+                            <h1>{singlePost.title}</h1>
                             <div>
-                                <img/>
+                                <img 
+                                    src={urlFor(singlePost.authorImage).url()}
+                                    alt={singlePost.name}
+                                
+                                />
                             </div>
                             <p></p>
                         </div>
                     </div>
-                    <img/>
+                    <img 
+                        src={singlePost.mainImage.asset.url}
+                        alt={singlePost.title}
+                    />
                 </header>
-                <div>BLOCK CONTENT</div>
+                <div>
+                    <BlockContent 
+                        blocks={singlePost.body}
+                        projectId="nveo0x9l"
+                        dataset="production"
+                    />
+                </div>
             </article>
             
         </main>

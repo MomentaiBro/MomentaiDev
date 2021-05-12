@@ -16,7 +16,7 @@ function App() {
         <Route component={Home} path='/' exact/>
         <Route component={About} path='/about' />
         <Route component={SinglePost} path='/post/:slug' />
-        <Route component={Blog} path='/blog' />
+        <Route component={Blog} path='/post' />
         <Route component={Project} path='/project' />
         <Route component={Contact} path='/contact' />
       </Switch>
