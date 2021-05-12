@@ -13,11 +13,11 @@ font-family: 'Raleway', sans-serif; */
 *{
   padding: 0;
   margin: 0;
-  color: green;
+  color: gainsboro;
+  background: black;
 }
 
 html, body{
-  background: #ff6;
   height: 100vh;
   width: 100vw;
   
@@ -26,21 +26,20 @@ html, body{
 .App{
   height: 100vh;
   width: 100vw;
-  background-color: honeydew;
 }
 
 .title {
   font-size: 2em;
   padding: 10px 5px;
   /* color: whitesmoke; */
-  color: whitesmoke;
+  /* color: whitesmoke; */
 
 }
 
 /* Home */
 .home__title{
   position: absolute;
-  color: goldenrod;
+  /* color: goldenrod; */
   z-index: 2;
 }
 
@@ -71,14 +70,14 @@ html, body{
 /* Blog */
 
 .blog__title{
-  color: white;
+  /* color: white; */
 }
 
 .blog__page{
-  background: #000;
+  /* background: #000; */
   height: 95vh;
   width:100vw;
-  color: whitesmoke;
+  /* color: whitesmoke; */
   display: flex;
   flex-direction: row;
 }
@@ -150,6 +149,7 @@ html, body{
 } */
 
 .NavBar__links{
+  background: inherit;
   margin-top: 15px;
   width: 85%;
   display: flex;

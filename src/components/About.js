@@ -22,7 +22,7 @@ export default function About() {
         .catch(console.error);
     }, []);
 
-    if(!author) return <div> Loading...</div>
+    if(!author) return <div> Loading... </div>
 
     return(
 
@@ -33,7 +33,7 @@ export default function About() {
                     <img src={urlFor(author.authorImage).url()} alt={author.name}/>
                     <div>
                         <h1 className="about__title title"> 
-                        Hey There! My Name is Alexander and I'm a Fullstack Software Engineer and Creative Coder!{" "}
+                            Hey There! My Name is Alexander and I'm a Fullstack Software Engineer and Creative Coder!{" "}
                         </h1>
                         <span>{author.name}</span>
                         <div>
