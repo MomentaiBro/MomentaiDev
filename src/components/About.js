@@ -22,11 +22,11 @@ export default function About() {
         .catch(console.error);
     }, []);
 
-    if(!author) return <div> Loading... </div>
+    if(!author) return <div className="loading__screen"> Loading... </div>
 
     return(
 
-        <main>
+        <main className="about__main slide">
             <img />
             <div>
                 <section>

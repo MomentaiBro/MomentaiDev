@@ -4,6 +4,15 @@
   --title: 'Cinzel', serif;
   --deco-title: 'Cinzel Decorative', cursive;
   --reg-text: 'Raleway', sans-serif;
+  --blue: rgb(0, 165, 244,);
+  --green: rgb(0, 57, 77);
+  --yellow: rgb(255, 189, 32);
+  --peach: rgb(255, 189, 169);
+  --orange: rgb(243, 119, 25);
+  --red-one: rgb(202, 37, 30);
+  --red-two: rgb(249, 50, 37);
+  --magenta: rgb(251, 27, 107);
+  --salmon: rgb(218, 83, 78);
 }
 
 /* font-family: 'Cinzel', serif;
@@ -14,13 +23,14 @@ font-family: 'Raleway', sans-serif; */
   padding: 0;
   margin: 0;
   color: gainsboro;
-  background: black;
+
 }
 
 html, body{
+  position: fixed;
   height: 100vh;
   width: 100vw;
-  
+  background: black;
 }
 
 .App{
@@ -29,8 +39,11 @@ html, body{
 }
 
 .title {
-  font-size: 2em;
+  font-size: 5em;
   padding: 10px 5px;
+  font-family: var(--title);
+  font-weight:100;
+
   /* color: whitesmoke; */
   /* color: whitesmoke; */
 
@@ -43,21 +56,21 @@ html, body{
   z-index: 2;
 }
 
-.home__wrapper{
+.home__main{
 
   width: auto;
   height: 95vh;
   border: 1px solid darkkhaki;
 }
 
-.home__wrapper img{
+.home__main img{
   position: absolute;
   max-width: 100%;
   max-height: auto;
   z-index: 0;
 }
 
-.home__area{
+.home_title__box{
   display: flex; 
   align-items: center;
   justify-content: center;
@@ -67,13 +80,18 @@ html, body{
 
 /* About */
 
+.about__title{
+  font-size: 2em;
+}
+
+
 /* Blog */
 
 .blog__title{
   /* color: white; */
 }
 
-.blog__page{
+.blog__main{
   /* background: #000; */
   height: 95vh;
   width:100vw;
@@ -123,10 +141,13 @@ html, body{
 
 /* Contact */
 
+
+
 /* NavBar */
-.NavBar__wrapper{
-  position: absolute;
+.navbar__main{
+  position: fixed;
   bottom: 0;
+  left:0;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -135,7 +156,7 @@ html, body{
   
   
 }
-.NavBar__area{
+.navbar__area{
   width: 75vw;
   background: cornflowerblue;
   display: flex;
@@ -148,7 +169,7 @@ html, body{
 
 } */
 
-.NavBar__links{
+.navbar__links{
   background: inherit;
   margin-top: 15px;
   width: 85%;
@@ -156,7 +177,7 @@ html, body{
   flex-direction: row;
   justify-content: space-between;
 }
-.NavBar__links a{
+.navbar__links a{
   transform: scale(.9);
   text-decoration: none;
   font-size: 40px;
@@ -165,17 +186,63 @@ html, body{
   color: #000;
   transition: 2s
 }
-.NavBar__links a:visited{
+.navbar__links a:visited{
   text-decoration: none;
   
 }
-.NavBar__links a:hover{
+.navbar__links a:hover{
   background:crimson;
   transition: 6s;
   
 }
 
+.navbar__links a:hover{
+  background: rgba(190,130,10,.2)
+}
+
 /* Project */
+.project__main{
+  background: rgb(135,206,235); 
+  height: 95vh;
+  width: 100vw;
+}
+
+.project__title{
+  font-family: var(--deco-title);
+  font-size: 15vh;
+  font-weight: 100;
+  position: absolute;
+  top: 4%;
+  left: 6%;
+  opacity: .9;
+}
+
+.mountain__one{
+  position: absolute;
+  height: 96vh;
+  width: 100vw;
+  background: gray;
+  clip-path: polygon(15% 65%, 0% 100%, 100% 100%);
+
+}
+.mountain__two{
+  position: absolute;
+  height: 96vh;
+  width: 100vw;
+  background: slategray;
+  clip-path: polygon(62% 63%, 0% 100%, 100% 100%);
+
+
+}
+.mountain__three{
+  position: absolute;
+  height: 96vh;
+  width: 100vw;
+  background: darkslategray;
+  clip-path: polygon(83% 35%, 45% 100%, 100% 100%);
+
+
+}
 
 /* SinglePost */
 
@@ -183,6 +250,15 @@ html, body{
   height: 95vh;
   width: auto;
   background: brown;
+}
+
+
+.loading__screen{
+  display: flex;
+  height:100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
 
