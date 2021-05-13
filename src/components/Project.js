@@ -42,7 +42,7 @@ export default function Project() {
     var speed = 0.05;
 
     const draw = (p5) => {
-        p5.background(0);
+        p5.background(150);
         var y1 = offset + p5.sin(angle) * scalar;
         var y2 = offset + p5.sin(angle + 0.4) * scalar;
         var y3 = offset + p5.sin(angle + 8) * scalar;
@@ -72,7 +72,7 @@ export default function Project() {
         {projectData && projectData.map((project, index) => (
 
                 <article className="project__box">
-                    <h3>
+                    <h3 className="project__">
                         <a
                         href={project.link}
                         alt={project.title}

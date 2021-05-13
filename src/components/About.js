@@ -51,8 +51,8 @@ export default function About() {
             var x = p5.random(p5.windowWidth);
             var y = p5.random(p5.windowHeight);
 
-            p5.noStroke();
-            p5.fill(255);
+            p5.strokeWeight(2)
+            p5.fill(255,206,127);
             p5.ellipse(x, y, p5.random(1,3), p5.random(1,3))
         }
 
@@ -80,16 +80,15 @@ export default function About() {
     return(
         <main className="about__main slide">
             <Sketch setup={setup} draw={draw} />
-            <img />
             <div>
-                <section>
+                <section className="bio__section">
                     <img src={urlFor(author.authorImage).url()} alt={author.name}/>
                     <div>
                         <h1 className="about__title title"> 
-                            Hey There! My Name is Alexander and I'm a Fullstack Software Engineer and Creative Coder!{" "}
+                            MOMENTAI!{" "}
                         </h1>
                         <span>{author.name}</span>
-                        <div>
+                        <div className="block__content">
                             <BlockContent blocks={author.bio} projectId="nveo0x9l" dataset="production"/>
                         </div>
                     </div>
