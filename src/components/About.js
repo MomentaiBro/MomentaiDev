@@ -44,7 +44,7 @@ export default function About() {
 
 
     const draw = (p5) => {
-        p5.background(0);
+        p5.background(150);
 
         for (var i = 0; i < 150; i++) {
             // Code goes here

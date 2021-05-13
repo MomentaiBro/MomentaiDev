@@ -26,8 +26,9 @@ export default function Blog() {
     return(
         <main className="blog__main slide">
             <section className="blog__left_section">
-                <h1 className="blog__title title">Blog Page</h1>
-                <h2>Welcome to my blogging space</h2>
+                <h1 className="blog__title title">Blog</h1>
+                <section className="horizontal__text">
+                </section>
             </section>
             <div className="blog__grid">
                 {postData && postData.map((post, index) => (

@@ -36,19 +36,19 @@ export default function Project() {
         
     };
 
-    var angle = 0.0;
+    var angle = 2.0;
     var offset= 100;
-    var scalar = 40;
+    var scalar = 100;
     var speed = 0.05;
 
     const draw = (p5) => {
         p5.background(0);
         var y1 = offset + p5.sin(angle) * scalar;
         var y2 = offset + p5.sin(angle + 0.4) * scalar;
-        var y3 = offset + p5.sin(angle + 0.8) * scalar;
-        p5.ellipse(100, y1, 40, 40);
-        p5.ellipse(300, y2, 40, 40);
-        p5.ellipse(500, y3, 40, 40);
+        var y3 = offset + p5.sin(angle + 8) * scalar;
+        p5.ellipse(p5.windowWidth / 4 , y1, 40, 40);
+        p5.ellipse(p5.windowWidth / 2 , y2, 40, 40);
+        p5.ellipse(p5.windowWidth / 1.3 , y3, 40, 40);
         angle += speed;
         // p5.polygon();
         // NOTE: Do not use setState in the draw function or in functions that are executed
@@ -71,7 +71,7 @@ export default function Project() {
 
         {projectData && projectData.map((project, index) => (
 
-                <article>
+                <article className="project__box">
                     <h3>
                         <a
                         href={project.link}
@@ -82,31 +82,6 @@ export default function Project() {
                             {project.title}
                         </a>
                     </h3>
-                        <div>
-                            <span>
-                                <strong>Finished on</strong>:{" "}
-                                {new Date(project.date).toLocaleDateString()}
-                            </span>
-                            <span>
-                                <strong>Company</strong>:{" "}
-                                {project.place}
-                            </span>
-                            <span>
-                                <strong>Type</strong>:{" "}
-                                {project.projectType}
-                            </span>
-                            <p> {project.description}</p>
-                            <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >
-                                View the Project{" "}
-                            <span role="img" aria-label="right pointer">
-                                👉
-                            </span>
-                            </a>
-                        </div>
                 </article>
                 ))}
             </section>
