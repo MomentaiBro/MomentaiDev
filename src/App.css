@@ -51,9 +51,9 @@ html, body{
 
 /* Home */
 .home__title{
-  position: absolute;
-  /* color: goldenrod; */
-  z-index: 2;
+  font-family: var(--deco-title);
+  font-size: 19vh;
+  color: #000;
 }
 
 .home__main{
@@ -69,11 +69,10 @@ html, body{
 }
 
 .home_title__box{
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  width: 95vw;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  width: 100%;
 }
 
 /* About */

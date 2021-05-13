@@ -17,18 +17,11 @@ export default function Home() {
     
     
         const draw = (p5) => {
-            p5.background(0);
-            
-            // for (var i = 0; i < 360; i++) {
-            //     //  goes here
-            //     var x1 = p5.windowWidth/4;
-            //     var y = p5.windowHeight/1.4;
-
-            //     p5.ellipse(x1,y, 100, 100);
-            // };
-
+            p5.background(150);
+            p5.fill(165, 187, 280)
             var x = (p5.windowWidth/1.2)
             p5.quad(x, 50, p5.windowWidth/1.05, p5.windowHeight/1.5, x, p5.windowHeight, p5.windowWidth/1.4, p5.windowHeight/1.5);
+            p5.strokeWeight(2)
             
             
 
@@ -43,7 +36,7 @@ export default function Home() {
         <main className="home__main slide">
             
             <section className="home_title__box">
-                <h1 className="home__title title">Home Page</h1>
+                <h1 className="home__title title">Welcome</h1>
             </section>
             <div>
                 <Sketch setup={setup} draw={draw} />
