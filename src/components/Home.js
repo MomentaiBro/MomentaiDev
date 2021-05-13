@@ -25,20 +25,23 @@ export default function Home() {
         const draw = (p5) => {
             p5.background(0);
             var x = (p5.windowWidth/1.2)
-            var y = p5.windowHeight/2
+            var y = p5.windowHeight
             var y1 = offset + p5.sin(angle) * scalar;
             var y2 = offset + p5.sin(angle + 0.6) * scalar;
             var y3 = offset + p5.sin(angle + 0.8) * scalar;
-            p5.ellipse(x, y1, 300, 900);
+            p5.quad(x, 50, p5.windowWidth/1.05, p5.windowHeight/1.5, x, p5.windowHeight, p5.windowWidth/1.4, p5.windowHeight/1.5);
             p5.ellipse(300, y2, 40, 40);
             p5.ellipse(500, y3, 40, 40);
             angle += speed;
+            scalar += speed;
             // p5.polygon();
             // NOTE: Do not use setState in the draw function or in functions that are executed
             // in the draw function...
             // please use normal variables or class properties for these purposes
             // x++;
         };
+
+
         return(
         <main className="home__main slide">
             
