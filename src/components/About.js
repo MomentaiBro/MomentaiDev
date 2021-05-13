@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import sanityClient from "../client"
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
+import Sketch from "react-p5"
 
 
 const builder = imageUrlBuilder(sanityClient);
@@ -24,9 +25,43 @@ export default function About() {
 
     if(!author) return <div className="loading__screen"> Loading... </div>
 
-    return(
 
+    const setup = (p5, canvasParentRef) => {
+        // use parent to render the canvas in this ref
+        // (without that p5 will render the canvas outside of your component)
+        let canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
+        canvas.position(0,0)
+        canvas.style('z-index', '-1')
+        
+    };
+
+    var angle = 0.0;
+    var offset= 700;
+    var scalar = 40;
+    var speed = 0.005;
+
+    const draw = (p5) => {
+        p5.background(0);
+        var x = (p5.windowWidth/1.2)
+        var y = p5.windowHeight/1.2
+        var y1 = offset + p5.sin(angle) * scalar;
+        var y2 = offset + p5.sin(angle + 0.6) * scalar;
+        var y3 = offset + p5.sin(angle + 0.8) * scalar;
+        p5.ellipse(x, y1, 1000, 1000);
+        p5.ellipse(200, y2, 40, 40);
+        p5.ellipse(500, y3, 40, 40);
+        angle += speed;
+        // p5.polygon();
+        // NOTE: Do not use setState in the draw function or in functions that are executed
+        // in the draw function...
+        // please use normal variables or class properties for these purposes
+        // x++;
+    };
+
+
+    return(
         <main className="about__main slide">
+            <Sketch setup={setup} draw={draw} />
             <img />
             <div>
                 <section>
