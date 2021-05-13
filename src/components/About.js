@@ -32,6 +32,7 @@ export default function About() {
         let canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
         canvas.position(0,0)
         canvas.style('z-index', '-1')
+        p5.frameRate(5);
         
     };
 
@@ -39,9 +40,24 @@ export default function About() {
     var offset= 700;
     var scalar = 40;
     var speed = 0.005;
+    
+
 
     const draw = (p5) => {
         p5.background(0);
+
+        for (var i = 0; i < 150; i++) {
+            // Code goes here
+            var x = p5.random(p5.windowWidth);
+            var y = p5.random(p5.windowHeight);
+
+            p5.noStroke();
+            p5.fill(255);
+            p5.ellipse(x, y, p5.random(1,3), p5.random(1,3))
+        }
+
+
+
         var x = (p5.windowWidth/1.2)
         var y = p5.windowHeight/1.2
         var y1 = offset + p5.sin(angle) * scalar;
@@ -56,7 +72,9 @@ export default function About() {
         // in the draw function...
         // please use normal variables or class properties for these purposes
         // x++;
+        
     };
+
 
 
     return(

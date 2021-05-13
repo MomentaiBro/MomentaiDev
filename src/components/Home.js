@@ -2,8 +2,6 @@ import React from "react"
 import Sketch from "react-p5"
 
 
-let x = 50;
-let y = 50;
 
 export default function Home() {
 
@@ -17,24 +15,16 @@ export default function Home() {
 
 
     
-        var angle = 0.0;
-        var offset= 490;
-        var scalar = 40;
-        var speed = 0.005;
     
         const draw = (p5) => {
-            p5.background(0);
+            p5.background(150);
+            p5.fill(165, 187, 280)
             var x = (p5.windowWidth/1.2)
-            var y = p5.windowHeight
-            var y1 = offset + p5.sin(angle) * scalar;
-            var y2 = offset + p5.sin(angle + 0.6) * scalar;
-            var y3 = offset + p5.sin(angle + 0.8) * scalar;
             p5.quad(x, 50, p5.windowWidth/1.05, p5.windowHeight/1.5, x, p5.windowHeight, p5.windowWidth/1.4, p5.windowHeight/1.5);
-            p5.ellipse(300, y2, 40, 40);
-            p5.ellipse(500, y3, 40, 40);
-            angle += speed;
-            scalar += speed;
-            // p5.polygon();
+            p5.strokeWeight(2)
+            
+            
+
             // NOTE: Do not use setState in the draw function or in functions that are executed
             // in the draw function...
             // please use normal variables or class properties for these purposes
@@ -46,7 +36,7 @@ export default function Home() {
         <main className="home__main slide">
             
             <section className="home_title__box">
-                <h1 className="home__title title">Home Page</h1>
+                <h1 className="home__title title">Welcome</h1>
             </section>
             <div>
                 <Sketch setup={setup} draw={draw} />
