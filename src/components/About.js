@@ -57,7 +57,6 @@ export default function About() {
         }
 
 
-
         var x = (p5.windowWidth/1.2)
         var y = p5.windowHeight/1.2
         var y1 = offset + p5.sin(angle) * scalar;
@@ -87,7 +86,7 @@ export default function About() {
                         <h1 className="about__title title"> 
                             MOMENTAI!{" "}
                         </h1>
-                        <span>{author.name}</span>
+                        <div className="author__name">{author.name}</div>
                         <div className="block__content">
                             <BlockContent blocks={author.bio} projectId="nveo0x9l" dataset="production"/>
                         </div>

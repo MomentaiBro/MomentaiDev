@@ -82,6 +82,8 @@ html, body{
   text-align: center;
 }
 
+
+
 .bio__section{
   display: flex;
   justify-content: space-around;
@@ -94,12 +96,20 @@ html, body{
   width: 45vw;
   background: rgba(0,0,0,.8);
   border: 5px solid black;
+  padding: 10px;
+  font-style: var(--reg-text);
 }
 
 .bio__section img{
-
-  height: 100px;
+  padding-top: 15px;
+  height: 300px;
   width:auto;
+  
+}
+
+.author__name{
+  text-align: center;
+  font-weight: 500;
 }
 
 .block__content{
@@ -149,30 +159,44 @@ html, body{
 
 .blog__grid{
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 80vw;
-  justify-content: flex-end;
-  align-items: flex-start;
-  flex-flow: row-reverse;
+  flex-flow: column;
+  align-items: center;
   margin: 2%;
   padding-left: 21vw;
-  overflow: hidden;
+  overflow: scroll;
 }
-.blog__post__card{
-  height: auto;
-  width: auto;
-  border: 5px dotted white;
-  padding-bottom: 50px;
-  margin: 10px
-}
-.blog__post__title{
-  text-align: center;
 
+.blog__post__card{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 50vw;
+  margin: 10px;
+  border-left: 5px solid rgb(252, 200, 189);
 }
+
+
+.blog__post__title{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-family: var(--reg-text);
+}
+
+.blog__post__title h3{
+  color: black;
+  text-decoration: none;;
+}
+
+
 
 .blog__img{
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -225,7 +249,6 @@ html, body{
 }
 .navbar__links a:visited{
   text-decoration: none;
-  
 }
 
 /* Project */
@@ -293,10 +316,42 @@ html, body{
 /* SinglePost */
 
 .SP__slide{
-  height: 95vh;
-  width: auto;
-  background: brown;
+  height: auto;
+  width: 100vw;
+  background:rgb(139,139,139);
+  overflow: scroll;
 }
+
+.SP__header{
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background:rgb(252, 200, 189);
+  font-family: var(--deco-title);
+  box-shadow: 5px solid black;
+}
+
+.SP__header h1{
+  color: black;
+}
+
+.SP__block{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--reg-text);
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow: scroll;
+}
+
+
 
 
 .loading__screen{

@@ -33,11 +33,8 @@ export default function Blog() {
             <div className="blog__grid">
                 {postData && postData.map((post, index) => (
                             <article className="blog__post__card">
-                                    <Link to={"/post/" + post.slug.current}
-                                    >
-                                        <span
-                                            key={index}
-                                        >
+                                    <Link to={"/post/" + post.slug.current}>
+                                        <span key={index}>
                                             <img 
                                                 src={post.mainImage.asset.url}
                                                 alt={post.mainImage.alt}

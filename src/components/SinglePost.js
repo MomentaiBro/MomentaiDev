@@ -33,31 +33,30 @@ export default function SinglePost() {
         .catch(console.error);
     }, [slug]);
 
-    if(!singlePost) return <div> NO POSTS :(((( YAY</div>;
+    if(!singlePost) return <div className="loading__screen">Loading...Chotto Matte</div>;
 
     return(
         <main className="SP__slide">
             <article>
                 <header>
                     <div>
-                        <div>
+                        <div className="SP__header">
                             <h1>{singlePost.title}</h1>
-                            <div>
+                            {/* <div>
                                 <img 
                                     src={urlFor(singlePost.authorImage).url()}
                                     alt={singlePost.name}
                                 
                                 />
-                            </div>
-                            <p></p>
+                            </div> */}
                         </div>
                     </div>
-                    <img 
+                    {/* <img 
                         src={singlePost.mainImage.asset.url}
                         alt={singlePost.title}
-                    />
+                    /> */}
                 </header>
-                <div>
+                <div className="SP__block">
                     <BlockContent 
                         blocks={singlePost.body}
                         projectId="nveo0x9l"

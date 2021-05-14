@@ -37,9 +37,9 @@ export default function Project() {
     };
 
     var angle = 2.0;
-    var offset= 100;
-    var scalar = 100;
-    var speed = 0.05;
+    var offset= 600;
+    var scalar = 500;
+    var speed = 0.005;
 
     const draw = (p5) => {
         p5.background(150);
@@ -47,8 +47,8 @@ export default function Project() {
         var y2 = offset + p5.sin(angle + 0.4) * scalar;
         var y3 = offset + p5.sin(angle + 8) * scalar;
         p5.ellipse(p5.windowWidth / 4 , y1, 40, 40);
-        p5.ellipse(p5.windowWidth / 2 , y2, 40, 40);
-        p5.ellipse(p5.windowWidth / 1.3 , y3, 40, 40);
+        p5.ellipse(p5.windowWidth / 2 , y2, 60, 60);
+        p5.ellipse(p5.windowWidth / 1.3 , y3, 140, 140);
         angle += speed;
         // p5.polygon();
         // NOTE: Do not use setState in the draw function or in functions that are executed
